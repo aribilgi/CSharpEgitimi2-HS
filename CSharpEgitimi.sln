@@ -51,6 +51,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders22ClassLibraryKullanimi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{55449ABE-F862-465A-96A4-483BBA32DD09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppAdoNet", "WindowsFormsAppAdoNet\WindowsFormsAppAdoNet.csproj", "{860EDC23-30FB-409D-BAB8-E180A51EE9FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{55449ABE-F862-465A-96A4-483BBA32DD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55449ABE-F862-465A-96A4-483BBA32DD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55449ABE-F862-465A-96A4-483BBA32DD09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860EDC23-30FB-409D-BAB8-E180A51EE9FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860EDC23-30FB-409D-BAB8-E180A51EE9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860EDC23-30FB-409D-BAB8-E180A51EE9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860EDC23-30FB-409D-BAB8-E180A51EE9FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
