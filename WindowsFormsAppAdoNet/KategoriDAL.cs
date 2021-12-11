@@ -32,5 +32,42 @@ namespace WindowsFormsAppAdoNet
             return dataTable;//kayıtların yüklendiği data tabloyu geriye döndürdük
         }
 
+        public int Add(Kategori kategori)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Insert into Kategoriler values (@KategoriAdi,@Durum)", _connection);
+            command.Parameters.AddWithValue("@KategoriAdi", kategori.KategoriAdi);
+            command.Parameters.AddWithValue("@Durum", kategori.Durum);
+            var sonuc = command.ExecuteNonQuery();
+            command.Dispose();
+            _connection.Close();
+            return sonuc;
+        }
+
+        public int Update(Kategori kategori)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Update Kategoriler set KategoriAdi= @KategoriAdi, Durum = @Durum where Id=@Id", _connection);
+            command.Parameters.AddWithValue("@KategoriAdi", kategori.KategoriAdi);
+            command.Parameters.AddWithValue("@Durum", kategori.Durum);
+            command.Parameters.AddWithValue("@Id", kategori.Id);
+            var sonuc = command.ExecuteNonQuery();
+            command.Dispose();
+            _connection.Close();
+            return sonuc;
+        }
+
+        public int Delete(int id)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Delete from Kategoriler where Id=@Id", _connection);
+            
+            command.Parameters.AddWithValue("@Id", id);
+            var sonuc = command.ExecuteNonQuery();
+            command.Dispose();
+            _connection.Close();
+            return sonuc;
+        }
+
     }
 }
