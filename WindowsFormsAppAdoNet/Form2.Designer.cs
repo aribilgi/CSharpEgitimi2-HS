@@ -31,15 +31,15 @@ namespace WindowsFormsAppAdoNet
         {
             this.DgvUrunler = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtUrunAdi = new System.Windows.Forms.TextBox();
-            this.txtUrunFiyati = new System.Windows.Forms.TextBox();
-            this.txtStokMiktari = new System.Windows.Forms.TextBox();
-            this.btnKaydet = new System.Windows.Forms.Button();
-            this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.txtStokMiktari = new System.Windows.Forms.TextBox();
+            this.txtUrunFiyati = new System.Windows.Forms.TextBox();
+            this.txtUrunAdi = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUrunler)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,7 @@ namespace WindowsFormsAppAdoNet
             this.DgvUrunler.RowTemplate.Height = 24;
             this.DgvUrunler.Size = new System.Drawing.Size(776, 200);
             this.DgvUrunler.TabIndex = 0;
+            this.DgvUrunler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUrunler_CellClick);
             // 
             // groupBox1
             // 
@@ -72,53 +73,25 @@ namespace WindowsFormsAppAdoNet
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
             // 
-            // label1
+            // btnSil
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ürün Adı";
+            this.btnSil.Location = new System.Drawing.Point(201, 161);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.TabIndex = 8;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
-            // label2
+            // btnGuncelle
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ürün Fiyatı";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Stok Miktarı";
-            // 
-            // txtUrunAdi
-            // 
-            this.txtUrunAdi.Location = new System.Drawing.Point(176, 48);
-            this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(100, 22);
-            this.txtUrunAdi.TabIndex = 3;
-            // 
-            // txtUrunFiyati
-            // 
-            this.txtUrunFiyati.Location = new System.Drawing.Point(176, 76);
-            this.txtUrunFiyati.Name = "txtUrunFiyati";
-            this.txtUrunFiyati.Size = new System.Drawing.Size(100, 22);
-            this.txtUrunFiyati.TabIndex = 4;
-            // 
-            // txtStokMiktari
-            // 
-            this.txtStokMiktari.Location = new System.Drawing.Point(176, 104);
-            this.txtStokMiktari.Name = "txtStokMiktari";
-            this.txtStokMiktari.Size = new System.Drawing.Size(100, 22);
-            this.txtStokMiktari.TabIndex = 5;
+            this.btnGuncelle.Location = new System.Drawing.Point(119, 161);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(76, 23);
+            this.btnGuncelle.TabIndex = 7;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnKaydet
             // 
@@ -130,23 +103,53 @@ namespace WindowsFormsAppAdoNet
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // btnGuncelle
+            // txtStokMiktari
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(119, 161);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(75, 23);
-            this.btnGuncelle.TabIndex = 7;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.txtStokMiktari.Location = new System.Drawing.Point(176, 104);
+            this.txtStokMiktari.Name = "txtStokMiktari";
+            this.txtStokMiktari.Size = new System.Drawing.Size(100, 22);
+            this.txtStokMiktari.TabIndex = 5;
             // 
-            // btnSil
+            // txtUrunFiyati
             // 
-            this.btnSil.Location = new System.Drawing.Point(201, 161);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(75, 23);
-            this.btnSil.TabIndex = 8;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.txtUrunFiyati.Location = new System.Drawing.Point(176, 76);
+            this.txtUrunFiyati.Name = "txtUrunFiyati";
+            this.txtUrunFiyati.Size = new System.Drawing.Size(100, 22);
+            this.txtUrunFiyati.TabIndex = 4;
+            // 
+            // txtUrunAdi
+            // 
+            this.txtUrunAdi.Location = new System.Drawing.Point(176, 48);
+            this.txtUrunAdi.Name = "txtUrunAdi";
+            this.txtUrunAdi.Size = new System.Drawing.Size(100, 22);
+            this.txtUrunAdi.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Stok Miktarı";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(35, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ürün Fiyatı";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ürün Adı";
             // 
             // Form2
             // 

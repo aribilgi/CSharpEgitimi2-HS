@@ -24,7 +24,50 @@ namespace WindowsFormsAppAdoNet
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            var sonuc = urunDAL.Add(new Urun
+            {
+                StokMiktari = Convert.ToInt32(txtStokMiktari.Text),
+                UrunAdi = txtUrunAdi.Text,
+                UrunFiyati = Convert.ToDecimal(txtUrunFiyati.Text)
+            });
+            if (sonuc > 0)
+            {
+                DgvUrunler.DataSource = urunDAL.GetAllDataTable();
+                MessageBox.Show("Ürün eklendi!");
+            }
+        }
 
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            var sonuc = urunDAL.Update(new Urun
+            {
+                Id = Convert.ToInt32(DgvUrunler.CurrentRow.Cells[0].Value),
+                StokMiktari = Convert.ToInt32(txtStokMiktari.Text),
+                UrunAdi = txtUrunAdi.Text,
+                UrunFiyati = Convert.ToDecimal(txtUrunFiyati.Text)
+            });
+            if (sonuc > 0)
+            {
+                DgvUrunler.DataSource = urunDAL.GetAllDataTable();
+                MessageBox.Show("Ürün Güncellendi!");
+            }
+        }
+
+        private void DgvUrunler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtUrunAdi.Text = DgvUrunler.CurrentRow.Cells[1].Value.ToString();
+            txtUrunFiyati.Text = DgvUrunler.CurrentRow.Cells[2].Value.ToString();
+            txtStokMiktari.Text = DgvUrunler.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            var sonuc = urunDAL.Delete(Convert.ToInt32(DgvUrunler.CurrentRow.Cells[0].Value));
+            if (sonuc > 0)
+            {
+                DgvUrunler.DataSource = urunDAL.GetAllDataTable();
+                MessageBox.Show("Ürün Silindi");
+            }
         }
     }
 }

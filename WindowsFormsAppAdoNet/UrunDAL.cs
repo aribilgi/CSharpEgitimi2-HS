@@ -29,6 +29,43 @@ namespace WindowsFormsAppAdoNet
             _connection.Close();
             return dataTable;//kayıtların yüklendiği data tabloyu geriye döndürdük
         }
+        public int Add(Urun urun)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Insert into Urunler values (@UrunAdi,@UrunFiyati,@Stok)", _connection);
+            command.Parameters.AddWithValue("@UrunAdi", urun.UrunAdi);
+            command.Parameters.AddWithValue("@UrunFiyati", urun.UrunFiyati);
+            command.Parameters.AddWithValue("@Stok", urun.StokMiktari);
+            var sonuc = command.ExecuteNonQuery();
+            command.Dispose();
+            _connection.Close();
+            return sonuc;
+        }
+
+        public int Update(Urun urun)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Update Urunler set  UrunAdi=@UrunAdi, UrunFiyati=@UrunFiyati, StokMiktari=@Stok where Id=@Id", _connection);
+            command.Parameters.AddWithValue("@UrunAdi", urun.UrunAdi);
+            command.Parameters.AddWithValue("@UrunFiyati", urun.UrunFiyati);
+            command.Parameters.AddWithValue("@Stok", urun.StokMiktari);
+            command.Parameters.AddWithValue("@Id", urun.Id);
+            var sonuc = command.ExecuteNonQuery();
+            command.Dispose();
+            _connection.Close();
+            return sonuc;
+        }
+        public int Delete(int id)
+        {
+            ConnectionKontrol();
+            SqlCommand command = new SqlCommand("Delete from urunler where Id=@Id", _connection);
+
+            command.Parameters.AddWithValue("@Id", id);
+            var sonuc = command.ExecuteNonQuery();
+            command.Dispose();
+            _connection.Close();
+            return sonuc;
+        }
 
     }
 }
