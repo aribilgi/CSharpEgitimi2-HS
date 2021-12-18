@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -53,6 +54,51 @@ namespace WindowsFormsAppEFDbFirst
             if (sonuc > 0)
             {
                 MessageBox.Show("Kategori Eklendi");
+                DgvKategoriler.DataSource = urunYonetimi.Kategoriler.ToList();
+            }
+        }
+
+        private void DgvKategoriler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtKategoriAdi.Text = DgvKategoriler.CurrentRow.Cells[1].Value.ToString();
+                cbDurum.Checked = (bool)DgvKategoriler.CurrentRow.Cells[2].Value;
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Hata Oluştu!");
+                //Oluşan hatayı veritabanında log tablosunda saklayabiliriz
+                //hata.Message
+            }
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            urunYonetimi.Kategoriler.AddOrUpdate(new Kategoriler
+            {
+                Id = (int)DgvKategoriler.CurrentRow.Cells[0].Value,
+                Durum = cbDurum.Checked,
+                KategoriAdi = txtKategoriAdi.Text
+            });
+            var sonuc = urunYonetimi.SaveChanges();
+            if (sonuc > 0)
+            {
+                MessageBox.Show("Kategori Güncellendi!");
+                DgvKategoriler.DataSource = urunYonetimi.Kategoriler.ToList();
+            }
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            var silinecekKategori = urunYonetimi.Kategoriler.Find((int)DgvKategoriler.CurrentRow.Cells[0].Value);
+
+            urunYonetimi.Kategoriler.Remove(silinecekKategori);
+
+            var sonuc = urunYonetimi.SaveChanges();
+            if (sonuc > 0)
+            {
+                MessageBox.Show("Kategori Silindi!");
                 DgvKategoriler.DataSource = urunYonetimi.Kategoriler.ToList();
             }
         }

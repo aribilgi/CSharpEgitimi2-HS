@@ -64,6 +64,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2UrunYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2UrunYonetimi.Designer.cs">
+      <DependentUpon>Form2UrunYonetimi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kategoriler.cs">
       <DependentUpon>UrunDbModel.tt</DependentUpon>
     </Compile>
@@ -89,6 +95,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2UrunYonetimi.resx">
+      <DependentUpon>Form2UrunYonetimi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

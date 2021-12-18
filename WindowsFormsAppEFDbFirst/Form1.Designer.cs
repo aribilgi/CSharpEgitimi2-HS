@@ -50,6 +50,7 @@ namespace WindowsFormsAppEFDbFirst
             this.DgvKategoriler.RowTemplate.Height = 24;
             this.DgvKategoriler.Size = new System.Drawing.Size(776, 193);
             this.DgvKategoriler.TabIndex = 1;
+            this.DgvKategoriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvKategoriler_CellClick);
             // 
             // groupBox1
             // 
@@ -74,6 +75,7 @@ namespace WindowsFormsAppEFDbFirst
             this.btnSil.TabIndex = 7;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -83,6 +85,7 @@ namespace WindowsFormsAppEFDbFirst
             this.btnGuncelle.TabIndex = 6;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnKaydet
             // 
