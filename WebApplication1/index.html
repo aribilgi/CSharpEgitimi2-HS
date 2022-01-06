@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Web uygulaması nasıl oluşturulur?</h1>
+    <p>
+        Solution a sağ tıkladık, add new project > açılan pencereden arama kısmına web app yazdık ve çıkan sonuçlardan asp.net web application (.net framework) olanı seçtik (proje ikonu olarak C# ı seçiyoruz vb yi değil)
+        <br />
+        Project name alanına isim verip create e bastık > bir sonraki pencerede empty i seçip projeyi oluşturduk.
+    </p>
+    <div>
+        div elementi sayfada bölümler oluşturmamızı sağlar.
+    </div>
+    <p>
+        p elementi paragraf oluşturmamızı sağlar
+    </p>
+    <p>
+        Başlık elementleri h1-h6
+    </p>
+    <h1>h1 en büyük başlık</h1>
+    <h2>h2 Alt Başlık</h2>
+    <h3>h3 Orta Başlık</h3>
+    <h4>h4 başlık</h4>
+    <h5>h5 Başlık</h5>
+    <h6>h6 Başlık en küçük boyutlu</h6>
+    <a href="#">a elementi ile web sayfaları bir birine link verebilir</a> <br />
+    <a href="https://www.google.com/">Google a git</a> <br />
+    <a href="https://www.aribilgi.com/">Arı bilgi sitesine git</a> <br />
+    <a href="https://www.aribilgi.com/" target="_blank" title="Açıklama yazısı title ile oluşur">Arı bilgi sitesini yeni sekmede aç (target="_blank" bir sayfayı yeni sekmede açtırmamızı sağlar)</a>
+    <p>Sayfada Resim göstermek için kullandığımız element img dir</p>
+    <img src="https://www.aribilgi.com/wp-content/uploads/2020/09/cropped-logo.png" alt="Alternate Text" />
+    <img src="Resimler/logo.png" title="Arı Bilgi Logo" alt="Resim görünmezse alternatif yazı görünür" />
+    <img src="/logo.png" title="Arı Bilgi Logo" alt="Resim görünmezse alternatif yazı görünür" />
+    <p>
+        Table elementi ile Excel gibi tablolar oluşturabiliriz
+    </p>
+    <table>
+        <tr>
+            <td>
+                table kodu tablonun başlangıç ve bitişini belirler, tr kodu satır oluşturur, td kodu sütun oluşturur. Bu tablo tek satır ve tek sütundan oluşur.
+            </td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <td>Bu tablo 1 satır ve 2 sütundan oluşur</td>
+            <td>1 tane tr(satır) 2 tane td(sütun) var</td>
+        </tr>
+    </table>
+    <br />
+    <table border="1">
+        <tr>
+            <td>2 satır 2 sütunlu tablo</td>
+        </tr>
+        <tr>
+            <td>Her satırda 1 sütun var</td>
+        </tr>
+    </table>
+    <br />
+    <table border="1">
+        <tr>
+            <td>1. satır 1. sütun</td>
+            <td>1. satır 2. sütun</td>
+        </tr>
+        <tr>
+            <td>2. satır 1. sütun</td>
+            <td>2. satır 2. sütun</td>
+        </tr>
+    </table>
+    <br />
+    <table border="1">
+        <tr>
+            <td>1. satır 1. sütun</td>
+            <td>1. satır 2. sütun</td>
+            <td>1 - 3</td>
+        </tr>
+        <tr>
+            <td>2. satır 1. sütun</td>
+            <td>2. satır 2. sütun</td>
+            <td>2 - 3 </td>
+        </tr>
+    </table>
+    <br />
+    <h2>Tablolarda satır ve sütun birleştirme</h2>
+
+    <table border="1">
+        <caption>Tablo Başlığı</caption>
+        <tr>
+            <th>İsim</th>
+            <td>Aylin</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telefon</th>
+            <td>0598</td>
+        </tr>
+        <tr>
+            <td>0123</td>
+        </tr>
+    </table>
+
+    <br />
+
+    <table border="1">
+        <caption>Tabloda sütun birleştirme</caption>
+        <tr>
+            <td colspan="2">Bu sütun colspan="2" kodu sayesinde 2 sütunluk yer kaplar</td>
+        </tr>
+        <tr>
+            <td>2. satır 1. sütun</td>
+            <td>2. satır 2. sütun</td>
+        </tr>
+    </table>
+
+    <i>Html i elementi ile italik yani yana yatık yazılar yazdırabiliriz</i>
+    <em>em elementi ile de yatık yazılar yazdırabiliriz</em>
+    <b>bold kalın yazı</b>
+    <strong>strong güçlü yazı</strong>
+
+    <h2>Html de <small>small</small> elementi ile bir yazıyı daha küçük gösterebiliriz</h2>
+
+    <mark>mark HTML öğesi işaretli veya vurgulanmış metni tanımlar</mark>
+
+    <ins>Html ins tagı</ins>
+
+    <p>sub HTML öğesi ile <sub>alt</sub> çıkıntılı metin tanımlarız</p>
+    <p>sup HTML öğesi <sup>üst yazı</sup> metnini tanımlar</p>
+
+    <h3>Html de liste elemanları kullanımı</h3>
+    <p>Sıralı ve sırasız liste olmak üzere 2 farklı liste kullanabiliriz</p>
+    <ul>
+        <li>Unordered HTML List</li>
+        <li>Sırasız liste oluşturmak için</li>
+        <li>ul ve li kullanabiliriz</li>
+        <li>Özellikle menülerde sık kullanılır</li>
+    </ul>
+
+    <ol>
+        <li>Ordered HTML List</li>
+        <li>Sıra numaralı liste kullanmak istersek</li>
+        <li>ol ve li kullanabiliriz</li>
+    </ol>
+
+    <h4>Bir diğer liste yöntemi de dl yani Description Lists dir. Açıklamalı listeler oluşturmada kullanılır</h4>
+    <dl>
+        <dt>Çay var </dt>
+        <dd>İçersen</dd>
+        <dt>Yol var</dt>
+        <dd>Gidersen</dd>
+    </dl>
+
+    <fieldset>
+        <legend>Kullanıcı Girişi</legend>
+        <div>
+            Kullanıcı Adı :
+            <input id="Text1" type="text" />
+
+            <br />
+
+            Şifre :
+            <input id="Text2" type="text" />
+        </div>
+    </fieldset>
+    <!-- Html de yorum satırı oluşturma -->
+
+    <h2>Semantik html5 elementleri</h2>
+
+
+
+</body>
+</html>

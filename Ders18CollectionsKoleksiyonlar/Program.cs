@@ -165,7 +165,6 @@ namespace Ders18CollectionsKoleksiyonlar
             hst.Add(3, "Ayfon");
             hst.Add(4, "İztanbul");
             hst.Add(5, "Amasya");
-            hst.Add(6, "Angara");
             Console.WriteLine("Anahtarlar : ");
             foreach (var item in hst.Keys)
             {
