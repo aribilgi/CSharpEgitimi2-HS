@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <title>Css 01 Giris</title>
     <style>
-        h1 { color: red; } /* bu şekilde sayfamızdaki tüm h1 leri seçip ona kırmızı rengi uyguladık */
+        h1 {
+            color: red;
+        }
+        /* bu şekilde sayfamızdaki tüm h1 leri seçip ona kırmızı rengi uyguladık */
         h2, h3, h4 {
             color: crimson;
         }
@@ -18,32 +21,44 @@
             color: aquamarine;
             padding: 10px;
         }
+
         #nedenCss {
             background-color: burlywood;
             padding: 10px;
             border-bottom: 1px solid red;
         }
+
         #cssSozDizimi {
             background-color: blue;
             color: yellow;
             padding: 15px;
             border: 1px solid darkblue;
         }
+
         .center {
             text-align: center;
             color: red;
         }
+
         p.center {
             background-color: burlywood;
             text-align: right;
             color: white;
             padding: 18px;
-        }/*Css seçicilerden class seçicisini buradaki gibi p.center şeklinde kullanırsak bu sayfadaki p elementlerinden class ı center olanlara bu stili uygula anlamına gelir*/
+        }
+        /*Css seçicilerden class seçicisini buradaki gibi p.center şeklinde kullanırsak bu sayfadaki p elementlerinden class ı center olanlara bu stili uygula anlamına gelir*/
         .xlarge {
             font-size: x-large;
         }
         /* html elemanlarından class="xlarge" özelliğine sahip olanların yazı fontunu büyüten class */
+        * {
+            text-align: right;
+            color: blue;
+            font-size: 103%;
+        }
+        /* CSS Evrensel Seçici ile sayfadaki tüm HTML öğelerini seçip stil uygulayabiliriz */
     </style>
+    <link href="Stil.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -71,7 +86,112 @@
 
     <p>Örneğin h1 {color:blue;} şeklinde bir bildirimde bulunursak burada h1 seçici yani css i uygulamak istediğimiz elemandır, küme parantezi içindeki color property yani özelliktir, blue ise bu özelliğe atanan değer (value) dir.</p>
 
+    <h2>CSS Nasıl Eklenir</h2>
 
+    <h3>CSS Eklemenin Üç Yolu Vardır</h3>
+
+    <p id="harici">Harici CSS, Dahili CSS, Satır içi (İnline) CSS </p>
+
+    <p>
+        Harici CSS projeye ayrı bir css dosyası ekleyip css kodlarımızı oraya yazıyoruz ve bu dosyasyı html sayfamıza sürükleyip bırakarak ekliyoruz.
+    </p>
+
+    <p>
+        Dahili CSS: Bu sayfada yukarıda head tagları arasında yazdığımız style kodları arasındaki css e dahili css denir.
+    </p>
+
+    <p style="background-color: brown; color: bisque;">
+        Satır içi (İnline) CSS : Bu elementte kullandığımız  style="background-color: brown; color: bisque;" kodları ile yazım şekline inline css denir. Bu şekilde de html elementlerine css yazabiliriz.
+    </p>
+
+    <h3 style="font-family: 'Times New Roman', Times, serif">
+        Style kullanarak html kontrolüne yazı tipi fontu verme
+    </h3>
+
+    <h2 style="border: 3px solid DodgerBlue">
+        Html elementlerinde border ile çerçeve kullanabiliriz
+    </h2>
+
+    <h2 style="border: 3px solid #ddd; background-color: #808080;">
+        Html elementlerinde renk ismi yerine renk kodlarını da kullanabiliriz
+    </h2>
+
+    <h3>HTML öğesi için birden fazla stil belirtildiğinde hangi stil kullanılır?</h3>
+    <p>
+        1- Satır içi stili (İnline CSS) (html öğesi içinde h3 style="color: blue;" şeklinde yazarsak)
+        2- Dış ve iç stil sayfaları (baş bölümünde belirttiğim gibi css lerin sırasına göre)
+        3- Tarayıcı varsayılan (her tarayıcıcnın html elemanlarına uyguladığı varsayılan css özellikleri vardır)
+    </p>
+
+    <h2>CSS Kenarlık Rengi (Border)</h2>
+
+    <p>
+        Css de html elemanlarına çerçeve belirleyebiliriz. Bunun için css in border özelliği kullanılır.
+    </p>
+
+    <h1 style="border: 2px solid Tomato;">Solid-düz çizgi</h1>
+    <h2 style="border: 2px dashed DodgerBlue;">dashed - kesik çizgi</h2>
+    <h3 style="border: 2px dotted Violet;">dotted - noktalı çizgi</h3>
+    <h4 style="border: 5px double red;">double - çift çizgi</h4>
+    <h5 style="border: 5px groove red;">groove</h5>
+    <h6 style="border: 5px inset gray;">inset - geçişli</h6>
+    <h6 style="border: 5px outset gray;">outset - geçişli</h6>
+
+    <h2>CSS Arka Planlar</h2>
+
+    <div>
+        <h3>CSS arka plan özellikleri öğeler için arka plan efektlerini tanımlamada kullanılır. </h3>
+        <p>
+            arka plan rengi<br />
+            arka plan resmi<br />
+            arka plan tekrarı<br />
+            arka plan eki<br />
+            arka plan konumu
+        </p>
+
+        <div style="background-color: green; opacity: 0.5;">
+            Css de arkaplan rengine opacity ile saydamlık, şeffaflık ekleyebiliriz
+            <br />
+            Gerekli kod : background-color: green; opacity: 0.3;
+        </div>
+
+        <div style="background: rgba(0, 128, 0, 0.3)">
+            Opaklık için bir diğer yöntem de style da renk kodu olarak Rgba kullanmaktır
+            <br />
+            Örnek : style="background: rgba(0, 128, 0, 0.3)"
+            <br />
+            Sondaki değer alfa dır opaklığı bu değer ayarlar
+        </div>
+
+        <div style="background-image: url('/Resimler/logo.png'); height: 200px">
+            <h3>CSS arka plan resmi</h3>
+
+            <p>Css ile html elemanlarına arkaplan resimleri ekleyebiliriz</p>
+
+            <p>
+                Bunun için yazmamız gereken kod şudur : background-image: url("arkaplan.gif");
+            </p>
+        </div>
+
+        <br />
+        <br />
+
+        <div style="background-image: url('/Resimler/logo.png'); background-repeat: no-repeat; background-position: center center; height: 200px ">
+            <h3>CSS Arka Plan Tekrarı</h3>
+
+            <p>
+                background-repeat özelliği ile resim tekrarını yatayda, dikeyde veya tekrar etmeyecek şekilde ayarlayabiliriz
+            </p>
+
+            <h3>CSS arka plan pozisyonu</h3>
+
+            <p>
+                Özellik, arka plan resminin konumunu belirtmek için kullanılır.
+            </p>
+
+        </div>
+
+    </div>
 
 </body>
 </html>

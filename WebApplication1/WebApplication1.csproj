@@ -71,6 +71,8 @@
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Resimler\logo.png" />
+    <Content Include="Resimler\StyleSheet1.css" />
+    <Content Include="Stil.css" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
