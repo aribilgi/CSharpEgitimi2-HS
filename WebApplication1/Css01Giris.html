@@ -176,7 +176,7 @@
         <br />
         <br />
 
-        <div style="background-image: url('/Resimler/logo.png'); background-repeat: no-repeat; background-position: center center; height: 200px ">
+        <div style="background-image: url('/Resimler/logo.png'); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; height: 200px ">
             <h3>CSS Arka Plan Tekrarı</h3>
 
             <p>
@@ -187,7 +187,21 @@
 
             <p>
                 Özellik, arka plan resminin konumunu belirtmek için kullanılır.
+                <br />
+                Arkaplan resminin pozisyonunu ayarlamak için gerekli kod : background-position: right top; veya background-position: 25px 58px; pixellerle de ayarlayabiliriz.
+                <br />
+                Arka plan görüntüsünü sağ üst köşede konumlandırırız bu kodla.
             </p>
+
+            <h3>CSS arka plan sabitleme</h3>
+
+            <p>
+                Özellik, arka plan görüntüsünün kaydırılması mı yoksa sabit mi olması gerektiğini belirtir (sayfanın geri kalanıyla birlikte kaydırmaz). Eğer sayfa aşağı kaydırıldığında resmin sabit kalmasını istersek şu kodu eklemeliyiz : background-attachment: fixed;
+            </p>
+
+            <div style="background: #ffffff url('/Resimler/logo.png') no-repeat fixed center bottom; height: 600px;">
+
+            </div>
 
         </div>
 
