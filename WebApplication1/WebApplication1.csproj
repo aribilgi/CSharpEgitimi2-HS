@@ -71,6 +71,8 @@
     <Content Include="Css02MarginPadding.html" />
     <Content Include="Css03GenislikYukseklik.html" />
     <Content Include="Css04DisplayOzelligi.html" />
+    <Content Include="Css05PositionOzelligi.html" />
+    <Content Include="Css06IcerikTasmasi.html" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Resimler\logo.png" />
