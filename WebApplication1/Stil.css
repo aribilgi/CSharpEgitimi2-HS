@@ -12,3 +12,14 @@
 .ortala {
     text-align: center;
 }
+
+.kapsayici {
+    width: 50%;
+    border: 5px double blue;
+}
+
+#resim {
+    float: left;
+    border: 5px groove red;
+    margin-right: 18px;
+}

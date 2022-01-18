@@ -73,10 +73,13 @@
     <Content Include="Css04DisplayOzelligi.html" />
     <Content Include="Css05PositionOzelligi.html" />
     <Content Include="Css06IcerikTasmasi.html" />
+    <Content Include="Css07FloatOzellgi.html" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="JavaScript\Js01-Giris.html" />
+    <Content Include="JavaScript\Js02-MatematikselIslemler.html" />
+    <Content Include="JavaScript\Js03-KararYapilari.html" />
     <Content Include="Resimler\logo.png" />
-    <Content Include="Resimler\StyleSheet1.css" />
     <Content Include="Stil.css" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
