@@ -77,6 +77,8 @@
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="JavaScript\Js01-Giris.html" />
+    <Content Include="JavaScript\Js02-Matematiksel-Islemler.html" />
+    <Content Include="JavaScript\Js03-KararYapilari.html" />
     <Content Include="Resimler\masa.jpg" />
     <Content Include="Resimler\logo.png" />
     <Content Include="Stil.css" />
