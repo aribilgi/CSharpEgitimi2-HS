@@ -85,8 +85,15 @@
     <Content Include="JavaScript\Js07-Nesneler.html" />
     <Content Include="JavaScript\Js08-Fonksiyonlar.html" />
     <Content Include="JavaScript\Js09-Hazir-Nesneler.html" />
+    <Content Include="JavaScript\Js10-HistoryNesnesi.html" />
+    <Content Include="JavaScript\Js11-StringNesnesi.html" />
+    <Content Include="JavaScript\Js12-Olaylar.html" />
+    <Content Include="JavaScript\Js13-Diziler.html" />
+    <Content Include="JavaScript\Js14-Seciciler.html" />
+    <Content Include="JavaScript\Js15-Jquery-Seciciler.html" />
     <Content Include="Resimler\masa.jpg" />
     <Content Include="Resimler\logo.png" />
+    <Content Include="Script.js" />
     <Content Include="Stil.css" />
     <Content Include="TornaciSitesi\index.html" />
     <Content Include="TornaciSitesi\stil.css" />
