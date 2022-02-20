@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Js18-Jquery-Dom</title>
+    <script src="jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <h1>Js18- Javascript Jquery ile Dom İşlemleri</h1>
@@ -29,7 +30,7 @@
         <input id="Radio1" type="radio" name="cinsiyet" value="Kadın" />Kadın
         <input id="Radio2" type="radio" name="cinsiyet" value="Erkek" />Erkek
         <hr />
-        <a href="www.google.com" title="Beni google a götür">Gogıla Git</a>
+        <a href="https://www.google.com" title="Beni google a götür">Gogıla Git</a>
     </form>
 
     <p id="sonuclar">Boş p elementi</p>
@@ -49,9 +50,46 @@
 
             $("#sonuclar").html(degerler);
         });
+
+        //Attr değerini alma
+        $("#Button2").click(function () {
+            var attrHrefDegeri = $("form a").attr("href");
+            var attrTitleDegeri = $("form a").attr("title");
+
+            $("#sonuclar").html(attrHrefDegeri + "<hr />" + attrTitleDegeri);
+        });
     </script>
 
     <hr />
+
+    <h2>Jquery ile Html Öğereleri Ekleme</h2>
+
+    <div id="eleman" style="border:1px ridge crimson">
+        append : seçili elementin sonuna, prepend : başına, after : sonrasına, before : öncesine element ekler.
+    </div>
+    <input id="Button3" type="button" value="Html Öğereleri Ekle" />
+
+    <script>
+        //Jquery ile element ekleme
+        $("#Button3").click(function () {
+            $("#eleman").append("<p>append metodu ile eklendi</p>");
+            $("#eleman").prepend("<div>prepend metodu ile eklendi</div>");
+            $("#eleman").after("<h4>after metodu ile eklendi</h4>");
+            $("#eleman").before("<h4>before metodu ile eklendi</h4>");
+        });
+    </script>
+
+    <hr />
+
+    <h2>Jquery ile Html Öğereleri Sayfadan Kaldırma</h2>
+
+    <div id="silinecek">
+        bu element silinecek
+    </div>
+    <input id="Button4" type="button" value="Html Öğereleri Silme" />
+
+
+    <br /><br /><br /><br /><br /><br /><br />
 
 </body>
 </html>
