@@ -1,0 +1,1 @@
+﻿<b>buradaki içerik jquery ajax metoduyla yüklendi</b>

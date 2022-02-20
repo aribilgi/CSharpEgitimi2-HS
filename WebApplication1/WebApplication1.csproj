@@ -92,6 +92,9 @@
     <Content Include="JavaScript\Js16-Jquery-HTML.html" />
     <Content Include="JavaScript\Js17-jQueryCSS.html" />
     <Content Include="JavaScript\Js18-Jquery-Dom.html" />
+    <Content Include="JavaScript\Js19-Jquery-Efektler.html" />
+    <Content Include="JavaScript\Js20-Jquery-Ajax-Kullanimi.html" />
+    <Content Include="JavaScript\Js21-Jquery-Yukari-Cik-Uygulamasi.html" />
     <Content Include="Resimler\masa.jpg" />
     <Content Include="Resimler\logo.png" />
     <Content Include="Script.js" />
@@ -101,6 +104,7 @@
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
     <Content Include="Stil.css" />
+    <Content Include="TextFile1.txt" />
     <Content Include="TornaciSitesi\index.html" />
     <Content Include="TornaciSitesi\stil.css" />
     <Content Include="Web.config" />

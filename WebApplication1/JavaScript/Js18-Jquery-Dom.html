@@ -88,6 +88,65 @@
     </div>
     <input id="Button4" type="button" value="Html Öğereleri Silme" />
 
+    <script>
+
+        $("#Button4").click(function () {
+            //Jquery ile element silme
+            //$("#silinecek").remove();
+            //$("#silinecek").empty();
+
+            //Js ile element silme
+            document.getElementById("silinecek").remove();
+        });
+
+    </script>
+
+    <hr />
+
+    <h2>Html Üst Öğe Seçme</h2>
+    <div id="aciklama">
+        Jquery parent ile Html Üst Öğe Seçme
+    </div>
+    <p id="html"></p>
+
+    <script>
+
+        //Jquery Html Üst Öğe Seçme
+        $("#html").text($("#aciklama").parent().prop("nodeName"));
+
+        //Js ile HTML Üst Öğe Seçme
+        document.getElementById("html").innerHTML += " <br> " + document.getElementById("aciklama").parentNode.nodeName;
+    </script>
+
+    <hr />
+
+    <h2>Jquery ile change olayını yakalama</h2>
+
+    <form>
+        <p>
+            Metin Girin : <input id="degisim" type="text" />
+        </p>
+        <p>
+            Konular
+            <br />
+            <select id="Select1" class="degisim">
+                <option value="html">Html</option>
+                <option value="css">Css</option>
+                <option value="js" selected="selected">Javascript</option>
+                <option value="jquery">Jquery</option>
+            </select>
+        </p>
+        <h3 id="jqchange"></h3>
+    </form>
+
+    <script>
+        //Jquery ile değişikliği yakalama
+        $(".degisim").change(function () {
+            $("#jqchange").html($(this).val()); // buradaki $(this) kodu .degisim classına sahip elementi kasteder
+        });
+    </script>
+
+    <hr />
 
     <br /><br /><br /><br /><br /><br /><br />
 
