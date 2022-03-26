@@ -24,7 +24,7 @@ namespace MVCEgitim
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css")); // Bu kod uygulamamız çalıştıktan sonra /Content/css url adresine yapılacak iste sonucunda Content klasörü içerisindeki bootstrap.css ve site.css dosyalarını isteğin yapıldığı noktaya çağırır.
         }
     }
 }

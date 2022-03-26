@@ -8,9 +8,9 @@ namespace MVCEgitim.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index() // HomeController daki Index actionu
         {
-            return View();
+            return View(); // Burada Index action una gelen /home/Index isteği sonucunda views klasöründeki index.cshtml sayfasını çalıştırır.
         }
 
         public ActionResult About()

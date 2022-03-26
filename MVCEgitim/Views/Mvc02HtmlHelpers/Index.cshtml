@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Mvc02 Html Helpers";
+}
+
+<h2>Mvc02 Html Helpers</h2>
+
+
+<p>Html.ActionLink aşağıdaki gibi 2 parametreyle kullanılırsa aynı controllerdaki farklı action'lara sayfa yönlendirmesi yapılabilir.</p>
+
+@Html.ActionLink("Anasayfa", "Index")
+ActionLink Çıktısı :
+<a href="/Mvc02HtmlHelpers">Anasayfa</a>
+
+<hr />
+
+<p>
+    Ayrı bir controllera yönlendirme yapmak istersek aşağıdaki gibi 3 parametre kullanmamız gerekir
+</p>
+
+@Html.ActionLink("Hakkımızda", "About", "Home")
+ActionLink Çıktısı :
+<a href="/Home/About">Hakkımızda</a>
+<hr />
