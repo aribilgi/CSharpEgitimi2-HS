@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppEFCodeFirst"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{2390D696-3350-4111-86DC-251A1ED401B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCEgitim", "MVCEgitim\MVCEgitim.csproj", "{97177D4A-99A5-4974-948A-35F5A845300F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -177,6 +179,10 @@ Global
 		{2390D696-3350-4111-86DC-251A1ED401B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2390D696-3350-4111-86DC-251A1ED401B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2390D696-3350-4111-86DC-251A1ED401B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97177D4A-99A5-4974-948A-35F5A845300F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97177D4A-99A5-4974-948A-35F5A845300F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97177D4A-99A5-4974-948A-35F5A845300F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97177D4A-99A5-4974-948A-35F5A845300F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
