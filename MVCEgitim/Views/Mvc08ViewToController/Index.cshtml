@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "MVC View dan Controller a veri gönderme";
+}
+
+<h2>MVC View dan Controller a veri gönderme</h2>
+
+<div>
+    @using (Html.BeginForm("Index", "Mvc08ViewToController", FormMethod.Get))
+    {
+        @Html.TextBox("txtAra") <hr />
+        <input type="submit" value="Ara" />
+    }
+</div>
+
+<div>
+    <form action="/Mvc08ViewToController" method="get">
+        <input id="txtAra" name="txtAra" type="text" value=""> <hr>
+        <input type="submit" value="Ara">
+    </form>
+</div>
