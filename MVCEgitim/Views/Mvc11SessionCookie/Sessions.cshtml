@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Session Kullanımı";
+}
+
+<h2>Session Kullanımı</h2>
+
+
+@{
+    if (Session["deger"] != null)
+    {
+        <h3>
+            Sessiondaki Veri : @Session["deger"]
+        </h3>
+    }
+    else
+    {
+        <h3>Session Boş!</h3>
+    }
+}

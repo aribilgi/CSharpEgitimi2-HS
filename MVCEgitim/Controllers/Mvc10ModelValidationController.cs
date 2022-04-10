@@ -28,8 +28,56 @@ namespace MVCEgitim.Controllers
             }
             return View(uye); // Eğer parametreyle gelen uye nesnesinde validasyon sorunları varsa return View(uye); koduyla ön yüz sayfasına nesneyi geri gönderiyoruz
         }
-        public ActionResult UyeDuzenle()
+        public ActionResult UyeDuzenle(int? id) // id parametresini bu şekilde yakalayabiliriz
         {
+            // Mvc de kayıt düzenleme metodunda adres çubuğundan id ye gelen değere göre ilgili kayıt veritabanında sorgulanır ve kayıt varsa sayfaya gönderilir. Kayıt yoksa hata mesajı gönderilir kayıt bulunamadı gibi
+            Uye uye = new Uye()
+            {
+                Id = 18,
+                Ad = "Fatih",
+                Soyad = "Sultan",
+                Email = "fatih@sultan.net",
+                TCKimlikNo = "0001453"
+            };
+            return View(uye); // Bulunan kayıt view a gönderilir
+        }
+        [HttpPost]
+        public ActionResult UyeDuzenle(Uye uye)
+        {
+            if (ModelState.IsValid)
+            {
+                // Projede bu alan gelen nesnenin veritabanında güncelleneceği alandır
+                ViewBag.UyeBilgi = $"Üye Adı : {uye.Ad} <hr /> Üye Soyad : {uye.Soyad} <hr /> Üye Mail : {uye.Email} <hr /> Üye Tc No : {uye.TCKimlikNo}";
+            }
+            return View(uye);
+        }
+        public ActionResult UyeListesi()
+        {
+            // Burada veritabanından üye listesi çekilir ve sayfaya gönderilir
+            var uyelistesi = new List<Uye>() {
+                new Uye(){ Id = 18, Ad = "Fatih", Soyad = "Sultan", Email = "fatih@sultan.net", TCKimlikNo = "0000000001453" },
+                new Uye(){ Id = 25, Ad = "Murat", Soyad = "Yılmaz", Email = "murat@yilmaz.co", TCKimlikNo = "0000012345432" },
+                new Uye(){ Id = 34, Ad = "Hamza", Soyad = "Kabulantok", Email = "hamza@kabul.net", TCKimlikNo = "000001253456" }
+            };
+            return View(uyelistesi);
+        }
+        public ActionResult UyeSil()
+        {
+            Uye uye = new Uye()
+            {
+                Id = 18,
+                Ad = "Fatih",
+                Soyad = "Sultan",
+                Email = "fatih@sultan.net",
+                TCKimlikNo = "0001453"
+            };
+            return View(uye); // Ekrana verilerin gelmesi için
+        }
+        [HttpPost]
+        public ActionResult UyeSil(int? id)
+        {
+            // Burada kayıt silme kodları yazılır
+            TempData["mesaj"] = "<h3>Kayıt Silindi!</h3>";
             return View();
         }
     }

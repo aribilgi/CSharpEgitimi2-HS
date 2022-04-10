@@ -9,7 +9,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Üye Bilgileri</h4>
         <hr />
@@ -96,4 +96,8 @@
 
 <div>
     @Html.ActionLink("Listeye Dön", "Index")
+</div>
+
+<div>
+    @Html.Raw(ViewBag.UyeBilgi)
 </div>
