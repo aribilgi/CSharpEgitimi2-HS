@@ -202,6 +202,7 @@
     <Content Include="Views\Mvc09ModelBinding\Kullanici.cshtml" />
     <Content Include="Views\Mvc09ModelBinding\Adres.cshtml" />
     <Content Include="Views\Mvc10ModelValidation\YeniUye.cshtml" />
+    <Content Include="Views\Mvc10ModelValidation\UyeDuzenle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

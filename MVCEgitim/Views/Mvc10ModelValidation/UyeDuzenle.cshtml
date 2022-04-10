@@ -1,12 +1,12 @@
 ﻿@model MVCEgitim.Models.Uye
 
 @{
-    ViewBag.Title = "Yeni Üye";
+    ViewBag.Title = "Üye Duzenle";
 }
 
-<h2>Yeni Üye</h2>
+<h2>Üye Duzenle</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
@@ -88,7 +88,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Ekle" class="btn btn-primary" />
+                <input type="submit" value="Kaydet" class="btn btn-success" />
             </div>
         </div>
     </div>
@@ -96,16 +96,4 @@
 
 <div>
     @Html.ActionLink("Listeye Dön", "Index")
-</div>
-
-<h3>Post işlemi sonrası vievbag deki verileri sayfada gösterme</h3>
-
-<div>
-    @ViewBag.UyeBilgi
-</div>
-
-<h3>Post işlemi sonrası vievbag deki verileri Html Olarak sayfada gösterme</h3>
-
-<div>
-    @Html.Raw(ViewBag.UyeBilgi)
 </div>

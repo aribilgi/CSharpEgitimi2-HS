@@ -28,5 +28,9 @@ namespace MVCEgitim.Controllers
             }
             return View(uye); // Eğer parametreyle gelen uye nesnesinde validasyon sorunları varsa return View(uye); koduyla ön yüz sayfasına nesneyi geri gönderiyoruz
         }
+        public ActionResult UyeDuzenle()
+        {
+            return View();
+        }
     }
 }
