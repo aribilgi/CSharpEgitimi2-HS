@@ -209,6 +209,7 @@
     <Content Include="Views\Mvc10ModelValidation\UyeSil.cshtml" />
     <Content Include="Views\Mvc11SessionCookie\Index.cshtml" />
     <Content Include="Views\Mvc11SessionCookie\Sessions.cshtml" />
+    <Content Include="Views\Mvc11SessionCookie\CookieOku.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

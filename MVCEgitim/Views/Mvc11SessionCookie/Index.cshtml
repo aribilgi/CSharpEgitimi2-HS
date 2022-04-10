@@ -33,3 +33,11 @@
     @Html.TextBox("text", "sess")
     <button type="submit">Session Oluştur</button>
 }
+
+<hr />
+
+@using (Html.BeginForm("CookieOlustur", "Mvc11SessionCookie"))
+{
+    @Html.TextBox("kuki", "kuki")
+    <button type="submit">Cookie Oluştur</button>
+}
