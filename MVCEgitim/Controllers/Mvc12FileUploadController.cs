@@ -23,6 +23,15 @@ namespace MVCEgitim.Controllers
                 // dosya işlemleri için System.IO kütüphanesini yukarıya using ile eklemeliyiz!
                 if (extensition == ".jpg" || extensition == ".png") // uzantıyı kontrol et
                 {
+                    //1. yöntem rasgele resim adı oluşturarak yükleme
+                    var folder = Server.MapPath("~/Images"); // resmin yükleneceği klasör
+                    var randomfilename = Path.GetRandomFileName(); // rasgele dosya adı oluşturduk
+                    var filename = Path.ChangeExtension(randomfilename, ".jpg");
+                    var path = Path.Combine(folder, filename); // klasör ve resim adını birleştirdik
+
+                    dosya.SaveAs(path); // Resmi sunucuya farklı kaydet yöntemiyle yükledik
+
+                    ViewBag.Resimadi = filename;
                 }
             }
             return View();
