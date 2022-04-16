@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Mvc ViewResult Çeşitleri";
+}
+
+<h2>Mvc ViewResult Çeşitleri</h2>
+
+<h3>ActionResult</h3>
+
+<p>ActionResult ile eylem sonunda geriye bir view dönüyoruz.</p>
+
+<hr />
+
+@Html.ActionLink("RedirectResult", "Index2")
+
+<hr />
+
+@Html.ActionLink("RedirectToRouteResult", "Index3")
+
+<hr />
+
+PartialViewResult
+<br />
+<h3>Kategorileri Partialla Getir</h3>
+
+@Html.Partial("_KategorilerPartial")
+<hr />
+
+<h3>Kategorileri Actionla Getir</h3>
+@Html.Action("KategorileriGetirPartial")
+
+<hr />
+
+<h3>Kategorileri Model Kullanarak Actionla Getir</h3>
+@Html.Action("KategorileriModelleGetirPartial")
+
+<hr />
+
+<h3>FileResult</h3>
+
+<div>
+    @Html.ActionLink("PDF İndir", "PdfDosyaIndir")
+</div>
+
+<hr />
+
+<h3>FileStreamResult</h3>
+
+@Html.ActionLink("Metin Dosyası İndir!", "MetinDosyasiIndir")
+
+<hr />
+
+<h3>JavaScriptResult</h3>
+
+@Html.ActionLink("JavaScriptResult!", "JsResult")
+
+@*<script src="/Mvc13ViewResult/JsResult"></script>*@
+
+<script src="/Mvc13ViewResult/jsButtonClick"></script>
+
+<div>
+    <input id="Button1" type="button" value="Tıkla" onclick="button_click();" />
+</div>
+
+<hr />
+
+@Html.ActionLink("JsonResult", "Index4")
+
+<hr />
+
+@Html.ActionLink("ContentResult", "XmlContentResult")
