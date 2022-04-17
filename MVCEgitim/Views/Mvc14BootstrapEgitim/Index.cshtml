@@ -1,0 +1,312 @@
+﻿
+@{
+    ViewBag.Title = "Bootstrap Eğitimi";
+}
+
+<h2>Bootstrap Eğitimi</h2>
+
+<p>
+    Bootstrap responsive(mobil uyumlu) web siteleri yapabilmemiz için geliştirilmiş, içerisinde css ve javascript kütüphanesi olan bir frameworktür.
+</p>
+
+<p>
+    Mvc projesi oluşturduğumuzda proje içerisinde bootstrap eski versiyonu 3.4.1 ile birlikte geliyor.
+</p>
+
+<p>
+    Bootstrap in son sürümü olan 5.. versiyonuna yükseltmek için projeye sağ tık nuget dan updates sekmesinden bootstrapi seçip update diyoruz.
+</p>
+
+<p>
+    Projede bootstrap css kütüphanesinin kullanılabilmesi için views shared klasörü altındaki layout.cshtml şablon sayfasının head alanında Content klasörü altındaki bootstrap.min.css dosyasının çağırılması gerekir!
+    <br />
+    Bootstrap javascript kütüphanesi ile kullanılabilen eklentileri kullanabilmek için de layout da Scripts klasörü altındaki bootstrap.min.js dosyasının çağırılması gerekir!
+</p>
+
+<p>
+    Bootstrap kendi içerisinde uygulamaya bağlanan cihaz ekranının çözünürlüğü, yani ekran genişliğine göre belirli pixellerde kırılıma giderek responsive tasarım sağlar.
+</p>
+
+<p>
+    Bu kırılım ölçüleri şu şekildedir.
+</p>
+
+<table border="1" width="500">
+    <tr>
+        <td>Kırılım noktası</td>
+        <td>Class ön eki</td>
+        <td>Kırılım px ölçüsü</td>
+    </tr>
+    <tr>
+        <td>X-small</td>
+        <td>yok</td>
+        <td>
+            < 576px
+        </td>
+    </tr>
+    <tr>
+        <td>Small</td>
+        <td>sm</td>
+        <td>
+            >=576px
+        </td>
+    </tr>
+    <tr>
+        <td>Medium</td>
+        <td>md</td>
+        <td>
+            >=768px
+        </td>
+    </tr>
+    <tr>
+        <td>Large</td>
+        <td>lg</td>
+        <td>
+            >=992px
+        </td>
+    </tr>
+    <tr>
+        <td>Extra large</td>
+        <td>
+            xl
+        </td>
+        <td>
+            >=1200px
+        </td>
+    </tr>
+    <tr>
+        <td>Extra extra large</td>
+        <td>
+            xxl
+        </td>
+        <td>
+            >=1400px
+        </td>
+    </tr>
+</table>
+
+<h2>
+    Containers
+</h2>
+
+<p>
+    Bs de containers class ı ile içerikler sarmalanır ve bu şekilde site responsive hale getirilmiş olur.
+</p>
+
+<h3>
+    Containers Kullanım Örneği
+</h3>
+
+<p>
+    Bootstrap varsayılan olarak ekranı <b>12 parçaya bölerek</b> responsive tasarım uygular!!
+</p>
+
+<div class="container">
+    bir dive container class ı vererek basit bir şekilde responsive hale getirebiliriz.
+    <hr />
+    Container class ı maksimum ölçüye geldiğinde kenarlardan boşluk bırakarak divi ortalar.
+</div>
+
+<div class="container-fluid">
+    bir dive class="container-fluid" kodu ile class eklersek ekran genişliğinin tamamını kullanarak responsive tasarım kullanabiliriz.
+</div>
+
+<h2>
+    Row-Satır Oluşturma
+</h2>
+
+<div class="container">
+    <div class="row">
+        Bir dive class="row" kodu ekleyerek bu divin responsive bir satır hale gelmesini sağlayabiliriz
+    </div>
+</div>
+
+<h2>
+    Col-Sütun Oluşturma
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            Bir satır içinde sütun divleri kullanmak istersek ilgili elemente class="col" değerini yazmamız yeterli.
+        </div>
+        <div class="col">
+            class ı row olan elemente kaç kolon eklemek istersek o kadar classı col olan element ekleyebiliriz.
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            Bir satır içinde sütun divleri kullanmak istersek ilgili elemente class="col" değerini yazmamız yeterli.
+        </div>
+        <div class="col-6 col-sm-4">
+            Bu div 6 birimlik bir ölçüye göre class="col-6" kodu ile ölçülendirilmiştir.
+            <hr />
+            Bir elemente birden fazla bootstrap class ı uygulayabiliriz.
+            <hr />
+            class özelliğine col-sm-4 kodu ekleyerek small ekranlarda 4 birimlik yer kaplamasını sağlayabiliriz.
+        </div>
+        <div class="col">
+            class ı row olan elemente kaç kolon eklemek istersek o kadar classı col olan element ekleyebiliriz.
+        </div>
+    </div>
+</div>
+
+<h2>
+    Satırdaki Kolon Sayısını Ayarlama
+</h2>
+
+<p>
+    row classına sahip divde kaç kolon gösterileceğini ayarlamak için dive class="row row-cols-3" kodu ekleyerek 1 satırda 3 kolon gösterilmesini sağlayabiliriz.
+    <hr />
+    1 satırda 1 ile 6 arasında vereceğimiz sayı ile kaç kolon gösterileceğini ayarlarız.
+</p>
+
+<div class="row row-cols-3">
+    <div class="col">col 1</div>
+    <div class="col">col 2</div>
+    <div class="col">col 3</div>
+    <div class="col">col 4</div>
+    <div class="col">col 5</div>
+    <div class="col">col 6</div>
+</div>
+
+<h2>
+    Columns
+</h2>
+
+<h3>
+    Kolonları Dikeyde Hizalama : align-items-start = üste, align-items-center = ortaya, align-items-end = en alta hizalar.
+</h3>
+
+<div class="row row-cols-3 align-items-start" style="min-height:222px">
+    <div class="col">col 1</div>
+    <div class="col">col 2</div>
+    <div class="col">col 3</div>
+    <div class="col">col 4</div>
+    <div class="col">col 5</div>
+    <div class="col">col 6</div>
+</div>
+
+<h2>
+    Yatayda Hizalama
+</h2>
+
+<div class="container">
+    <div class="row justify-content-end">
+        <div class="col-2">col 1</div>
+        <div class="col-2">col 2</div>
+        <div class="col-2">col 3</div>
+    </div>
+</div>
+
+<p>
+    Row elementi içerisinde kolonları başa, ortaya, sona gibi hizalama yapmak için row justify-content- classını sonuna end, center, start.. özellikleri ile kullanabiliriz.
+    <hr />
+    <b>Tüm classlar</b>
+    <br />
+    justify-content-end : sona hizala
+    <br />
+    justify-content-start : başa hizala
+    <br />
+    justify-content-center : orataya hizala
+    <br />
+    justify-content-around : her iki yanda eşit aralıkla hizala
+    <br />
+    justify-content-between : başa sona ve ortaya hizala
+    <br />
+    justify-content-evenly : tüm kolonları tam eşit aralıklarla hizala
+</p>
+
+<div class="row justify-content-between">
+    <div class="col-3">
+        <a href="#"><img src="~/Images/logo.png" width="100" /></a>
+    </div>
+    <div class="col-3">
+        <img src="~/Images/ygzua4xh.jpg" width="100" />
+    </div>
+</div>
+
+<h2>
+    Kolonları Sıralama - Order
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col">col 1</div>
+        <div class="col order-5">col 2</div>
+        <div class="col order-1">col 3</div>
+        <div class="col">col 4</div>
+    </div>
+</div>
+
+<p>
+    Kolonları sıralamak için order-0 ile order-6 arasında vereceğimiz değerle sıralama yapabiliriz.
+</p>
+
+<h2>
+    Offset ile Kolonları İttirme
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">col 1</div>
+        <div class="col-md-3 offset-md-2">
+            col 2 bu kolonda offset-md-2 classı ile medium ve üzeri ölçüdeki cihazlarda soldaki kolondan 2 birim kadar sağa doğru ittirme yapılmıştır.
+        </div>
+    </div>
+</div>
+
+<p>
+    offset-md-0 ile offset-md-11 arasında değer girerek kolonu sağa doğru ittirme işlemi yapabilmekteyiz.
+</p>
+
+<h2>
+    Bootstrap Margin Kullanarak Hizalama
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">col 1 - col-md-4</div>
+        <div class="col-md-4 ms-auto">col 2 - col-md-4 ms-auto bu divi sağa yapıştırır</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">col 1 - col-md-3</div>
+        <div class="col-md-3 me-auto">col 2 - col-md-3 me-auto margin-right auto ile divi sola hizalar</div>
+    </div>
+</div>
+
+<h2>
+    Bootstrap Margin - Padding Kullanımı
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col p-5">col 1 - col p-5</div>
+        <div class="col p-3">col 2 - col p-3</div>
+        <div class="col p-1">col 3 - col p-1</div>
+    </div>
+</div>
+
+<p>
+    Bs ta elementlere p-0 ile p-5 classlarıyla padding verilebilir. <hr />
+    p-sm, md,lg .. kullanarak farklı ekran genişlikleri için farklı boşluklar da kullanabiliriz.
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col m-5">col 1 - col m-5</div>
+        <div class="col m-3">col 2 - col m-3</div>
+        <div class="col m-1">col 3 - col m-1</div>
+    </div>
+</div>
+
+<p class="ms-5 me-2 pt-3 pb-4">
+    Bs ta elementlere m-0 ile m-5 classlarıyla margin verilebilir.
+    <hr />
+    m-sm, md, lg .. kullanarak farklı ekran genişlikleri için farklı boşluklar da kullanabiliriz.
+    <hr />
+    ms-5 = baştan yani sola margin, me-2 = margin right, pt-3 = padding-top, pb-4 = padding-bottom kodlarıyla tek yönden margin veya padding uygulayabiliriz.
+</p>
