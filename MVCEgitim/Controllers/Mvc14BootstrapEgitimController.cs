@@ -17,5 +17,13 @@ namespace MVCEgitim.Controllers
         {
             return View();
         }
+        public ActionResult Bootstrap3()
+        {
+            return View();
+        }
+        public ActionResult Bootstrap4Listeler()
+        {
+            return View();
+        }
     }
 }
